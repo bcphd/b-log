@@ -1,15 +1,15 @@
 "use strict";
 
-import Home         from './views/pages/Home.js'
-import About        from './views/pages/About.js'
-import Error404     from './views/pages/Error404.js'
-import PostShow     from './views/pages/PostShow.js'
-import Register     from './views/pages/Register.js'
+import Home         from '../views/pages/Home.js'
+import About        from '../views/pages/About.js'
+import Error404     from '../views/pages/Error404.js'
+import PostShow     from '../views/pages/PostShow.js'
+import Register     from '../views/pages/Register.js'
 
-import Navbar       from './views/components/Navbar.js'
-import Bottombar    from './views/components/Bottombar.js' 
+import Navbar       from '../views/components/Navbar.js'
+import Bottombar    from '../views/components/Bottombar.js' 
 
-import Utils        from './services/Utils.js'
+import Utils        from './Utils.js'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -36,13 +36,13 @@ const loader = async () => {
 const router = async () => {
 
     // Lazy load view element:
-    //const header = null || document.getElementById('header_container');
+    const header = null || document.getElementById('header_container');
     const content = null || document.getElementById('page_container');
     const footer = null || document.getElementById('footer_container');
     
     // Render the Header and footer of the page
-    //header.innerHTML = await Navbar.render();
-    //await Navbar.after_render();
+    header.innerHTML = await Navbar.render();
+    await Navbar.after_render();
     footer.innerHTML = await Bottombar.render();
     await Bottombar.after_render();
 
@@ -65,4 +65,4 @@ const router = async () => {
 window.addEventListener('hashchange', router);
 
 // Listen on page load:
-window.addEventListener('load', loader);
+window.addEventListener('load', router);

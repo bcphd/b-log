@@ -58,3 +58,8 @@ img, iframe, embed, video, audio {
 .card-img, .card-img-top, .card-img-bottom {
     width: initial;
 }
+
+/* pointer event so svg doesn't trigger the event.. anchor does */
+a > svg {
+    pointer-events: none;
+}

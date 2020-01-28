@@ -1,4 +1,4 @@
-import Utils        from './../../services/Utils.js'
+import Utils        from './../../js/Utils.js'
 
 let getPost = async (id) => {
     const options = {

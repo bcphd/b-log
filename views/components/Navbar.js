@@ -1,4 +1,4 @@
-import Utils        from '/services/Utils.js'
+import Utils        from '/js/Utils.js'
 
 let Navbar = {
     render: async () => {
@@ -22,7 +22,7 @@ let Navbar = {
       let hrefSearch = "a[href='/#" + parsedURL + "']";
       let els = document.querySelectorAll(hrefSearch);
 
-      els[0].classList.add('nav-link-active');
+      if( els.length > 0 ) els[0].classList.add('nav-link-active');
     }
 
 }
