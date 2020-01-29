@@ -22,19 +22,6 @@ const routes = {
     , '/pm'          : PM
 };
 
-// The loader
-const loader = async () => {
-
-    // Lazy load view element:
-    const header = null || document.getElementById('header_container');
-
-    // Render the Header and footer of the page
-    header.innerHTML = await Navbar.render();
-    await Navbar.after_render();
-
-    await router();
-}
-
 // The router code. Takes a URL, checks against the list of supported routes and then renders the corresponding content page.
 const router = async () => {
 
@@ -61,7 +48,7 @@ const router = async () => {
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
     content.innerHTML = await page.render();
     await page.after_render();
-  
+    window.scrollTo(0, 0);  
 }
 
 // Listen on hash change:
