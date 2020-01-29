@@ -3,7 +3,7 @@ let About = {
         let view =  /*html*/`
             <main id="main">
                 <h1>About</h1>
-                <p>Written using just html/js/css, Brian's Log is an open source design pattern/framework available under the <a href="https://github.com/bcphd/bclog/master/LICENSE">Apache Licence 2.0.</a> Brian's Log supports HTML, CSS, JS and JSON along with Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.</p>
+                <p>Written using just html/js/css, Brian's Log is an open source design pattern/framework available under the <a href="https://github.com/bcphd/b-log/blob/master/LICENSE" target="_blank">Apache Licence 2.0.</a> Brian's Log supports HTML, CSS, JS and JSON along with Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.</p>
                 <p>Brian's Log makes use of a variety of open source projects including:</p>
                 <ul>
                     <li><a href="#">ADD sources here</a></li>
